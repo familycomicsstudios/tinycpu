@@ -98,6 +98,7 @@ def loop_instructions(instructions):
 	if LOGLEVEL > 3:
 		print("DEBUG | VALUES: " + str(VALUES))
 		print("DEBUG | PC: " + str(PC))
+		print("DEBUG | RSEL: " + str(RSEL))
 		print("DEBUG | RAM: " + str(RAM))
 		print("DEBUG | A, B: " + str(A) + ", " + str(B))
 		input()
