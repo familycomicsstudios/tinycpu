@@ -17,8 +17,9 @@ def main():
 	parser.add_argument('-l', '--log-level')
 	args = parser.parse_args()
 	try:
-		tinycpu.LOGLEVEL = int(args.log_level)
-	except:
+		if not args.log_level == None:
+			tinycpu.LOGLEVEL = int(args.log_level)
+	except TypeError as e:
 		if tinycpu.LOGLEVEL > 0:
 			print("ERROR | loglevel must be int")
 	if not sys.stdin.isatty():
