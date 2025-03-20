@@ -29,3 +29,5 @@ Read next 2 instructions into A and B
 Move selected register to RAM address of non-selected register
 ### 0x0A
 Move RAM address of non-selected register to selected register
+### 0x0B
+If A>B, skip next instruction

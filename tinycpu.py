@@ -69,6 +69,10 @@ def ins0A():
 	else:
 		B = RAM[int(A)]
 
+def ins0B():
+	if A > B:
+		PC += 1
+
 def process_instruction(instruction):
 	if instruction == 0x00: # Pass
 		ins00()
@@ -92,6 +96,8 @@ def process_instruction(instruction):
 		ins09()
 	if instruction == 0x0A: # Move RAM address of non-selected register to selected register
 		ins0A()
+	if instruction == 0x0B: # Skip 1 line if A>B
+		ins0B()
 
 def loop_instructions(instructions):
 	global A, B, RSEL, PC, VALUES
