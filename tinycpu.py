@@ -1,4 +1,4 @@
-RAM = [0x00 for _ in range(2^8)]
+RAM = [0x00 for _ in range(256)]
 
 A = 0x00
 B = 0x00
